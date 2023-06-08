@@ -13,6 +13,7 @@ app.get('/',(req,res)=>{
     res.send('Summer Fashion Is running')
 })
 
+
 app.get('/instructor',(req,res)=>{
     res.send(instructor)
 })
