@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app=express()
 require('dotenv').config()
+const stripe=require('stripe')(process.env.PAYMENT_SECRET_KEY)
 const port=process.env.PORT||5000;
 const instructor=require('./instructors.json')
 const classes=require('./classes.json')
@@ -12,7 +13,7 @@ app.use(express.json())
 
 
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.snwbd1q.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -35,6 +36,25 @@ async function run() {
         const item=req.body;
      const result=await addCollection.insertOne(item)
      res.send(result)
+    });
+
+    app.get('/getAllClass',async(req,res)=>{
+        const result=await addCollection.find().toArray()
+        res.send(result)
+    })
+
+    app.get('/getAllClass/:id',async(req,res)=>{
+      const id=req.params.id;
+      const query={_id:new ObjectId(id)};
+      const result=await addCollection.findOne(query)
+      res.send(result)
+    })
+
+    app.delete('/delete/:id',async(req,res)=>{
+        const id=req.params.id;
+        const query={_id:new ObjectId(id)};
+        const result=await addCollection.deleteOne(query)
+        res.send(result)
     })
 
 
