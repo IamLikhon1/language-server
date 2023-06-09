@@ -5,39 +5,39 @@
         "name":"Learn English",
         "instructor":"Mr.David Miller",
         "available":75,
-        "price":49.99
+        "price":49.00
     },
     {
         "id":2,
         "image":"https://img.freepik.com/free-vector/arab-muslim-woman-traditional-clothing-with-blank-banner_1308-47570.jpg?w=740&t=st=1686242427~exp=1686243027~hmac=bb8668bfdba47057ed4e5e839ca271f5b2dc9fcc940f3fac8e12ee5be9350870",
         "name":"Learn Arabic",
         "instructor":"Md. Habib Basar",
-        "available":35,
-        "price":29.99
+        "available":55,
+        "price":29.00
     },
     {
         "id":3,
         "image":"https://img.freepik.com/free-vector/indian-hindi-diwas-hindi-book-tree-alphabets-words-background_1035-24858.jpg?w=740&t=st=1686242500~exp=1686243100~hmac=94eee0f1f3afefe03f32fed9c326e745087201da077dfbdd804c82e8ea8caf97",
         "name":"Learn Hindi",
         "instructor":"Mr.Trump",
-        "available":15,
-        "price":19.49
+        "available":49,
+        "price":19.00
     },
     {
         "id":4,
         "image":"https://img.freepik.com/premium-vector/colorful-profession-illustration_277904-8327.jpg?w=740",
         "name":"Learn French",
         "instructor":"Mr.Watson Smith",
-        "available":32,
-        "price":14.49
+        "available":38,
+        "price":14.00
     },
     {
         "id":5,
         "image":"https://img.freepik.com/premium-photo/portrait-indian-lady-teacher-saree-stands-against-green-white-blackboard_466689-7102.jpg?w=740",
         "name":"Learn Bangla",
         "instructor":"Ms.Kylie Jenner",
-        "available":49,
-        "price":54.49
+        "available":30,
+        "price":54.00
     },
     {
         "id":6,
